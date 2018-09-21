@@ -93,3 +93,26 @@ cvec_char
 ncvec_char = as.numeric(cvec_char)
 ncvec_char
 ```
+
+This code converts the factor variable into character variable which no longer has 0 or 1 values and so it not able to be converted into numeric values.
+
+## **Problem 2**
+We will first create a data frame comprised of:
+x: a random sample of size 1000 from a standard Normal distribution
+y: a random sample of size 1000 from a standard Normal distribution
+A logical vector indicating whether the x + y > 0
+A numeric vector created by coercing the above logical vector
+A factor vector created by coercing the above logical vector
+
+```{r}
+set.seed(1234)
+hw1_df2 = tibble(
+x = rnorm(1000),
+y = rnorm(1000),
+z = (x + y) > 0,
+nz = as.numeric(z),
+fz = as.factor(z)
+)
+hw1_df2
+
+```
