@@ -29,7 +29,7 @@ hw1_df
 
 ```
 
-## Calculation of mean
+### *Calculation of means*
 Now we will try to take the mean for all these variables. 
 
 ```{r}
@@ -41,7 +41,7 @@ mean(hw1_df[["vec_factor"]])
 
 We are only able to get the mean for vec_rsamp becaue it is a numeric variable and vec_logical because it is a logical varoable with value of 0 or 1. All the others are not numeric variables and so it is not possible to calculate a mean.
 
-## Conversion of variables
+### *Conversion of variables*
 We will now try to convert the on-numeric variables into numeric variables.
 
 (1) Converting the character variable into numeric variable
@@ -72,7 +72,7 @@ nvec_factor
 It introduces NAs in place of the factorial values
 
 
-## Second part of variable conversion:
+### *Second part of variable conversion:*
 
 (1) Converting character variable from character to factor to numeric
 
@@ -118,10 +118,10 @@ hw1_df2
 
 ```
 
-## In-line coding
+### *In-line coding*
 This dataframe contains a vector with `r length(hw1_df2[["x"]])`  observations. The mean of the variable x is `r mean(hw1_df2[["x"]])` and the median is `r median(hw1_df2[["x"]])`. The proportion of cases for which the logical vector is true is `r mean(hw1_df2[["z"]])`.
 
-## Making the scatterplot
+### *Making the scatterplot*
 
 (1) Color points using logical variable
 
