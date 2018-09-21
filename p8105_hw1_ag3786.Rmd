@@ -39,7 +39,57 @@ mean(hw1_df[["vec_char"]])
 mean(hw1_df[["vec_factor"]])
 ```
 
-We are only able to get the mean for vec_rsamp becaue it is a numeric variable. All the others are not numeric variables and so it is not possible to calculate a mean.
+We are only able to get the mean for vec_rsamp becaue it is a numeric variable and vec_logical because it is a logical varoable with value of 0 or 1. All the others are not numeric variables and so it is not possible to calculate a mean.
+
+We will now try to convert the on-numeric variables into numeric variables.
+
+(1) Converting the character variable into numeric variable
+
+```{r}
+nvec_char = as.numeric(hw1_df[["vec_char"]])
+nvec_char
+```
+
+It introduces NAs in place of characters
+
+(2) Converting the logical variable into numeric variable
+
+```{r}
+nvec_logical = as.numeric(hw1_df[["vec_logical"]])
+nvec_logical
+```
+
+It introduces 0 or 1 values based on whether the values were true or false
+
+(3) Converting the factor variable into numeric variable
+
+```{r}
+nvec_factor = as.numeric(hw1_df[["vec_factor"]])
+nvec_factor
+```
+
+It introduces NAs in place of the factorial values
 
 
+Second part of variable conversion:
 
+(1) Converting character variable from character to factor to numeric
+
+```{r}
+fvec_char = as.factor(hw1_df[["vec_char"]])
+fvec_char
+nfvec_char = as.numeric(fvec_char)
+nfvec_char
+```
+
+This code first converts the charactors into factor variables of 10 levels and then finally converts them into numeric values.
+
+
+(2) Converting factor variable from factor to character to numeric
+
+```{r}
+cvec_char = as.character(hw1_df[["vec_factor"]])
+cvec_char
+ncvec_char = as.numeric(cvec_char)
+ncvec_char
+```
